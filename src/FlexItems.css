@@ -1,0 +1,25 @@
+.flex-container {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse;
+    height: 200px; */
+    /* justify-content: flex-start;
+    justify-content: center; */
+    justify-content: flex-end;
+    width: 800px;
+    background-color: Purple;
+    /* width: 800px;  */
+    align-items: stretch;
+    height: 300px;
+    /* align-items: center; */
+    align-items: flex-start;
+    }  
+    .flex-container > div {
+    background-color: Orange; 
+    margin: 30px; 
+    padding: 20px;
+    font-size: 20px;
+    }
+
+    /* flex untuk memetakan komponen */
