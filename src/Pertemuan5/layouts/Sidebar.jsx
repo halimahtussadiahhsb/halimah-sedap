@@ -2,12 +2,15 @@ import { BiUser } from "react-icons/bi";
 import { MdDashboard, MdHeadphones } from 'react-icons/md';
 import { AiOutlineUnorderedList } from "react-icons/ai"; 
 import { RiCustomerServiceFill } from "react-icons/ri";
+import { MdFastfood } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import { FiLogIn } from "react-icons/fi";
 
 export default function Sidebar() {
   const baseClass = "flex items-center cursor-pointer rounded-xl p-4 font-medium text-gray-600";
   const activeClass = "bg-[#00B074] text-white font-semibold";
+  const menuClass = ({ isActive }) =>
+  `${baseClass} ${isActive ? activeClass : "hover:bg-[#00B07426] hover:text-[#00B074]"}`;
 
   return (
     <div id="sidebar" className="flex min-h-screen w-90 flex-col bg-white p-10 shadow-lg">
@@ -69,6 +72,16 @@ export default function Sidebar() {
               <span>User</span>
             </NavLink>
           </li>
+          <li>
+            <NavLink
+            id="menu-4"
+            to="/product"
+            className={menuClass}
+            >
+            <MdFastfood className="mr-4 text-xl" />
+            Product
+          </NavLink>
+        </li>
           <li>
             <NavLink
               to="/login"

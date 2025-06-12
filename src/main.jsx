@@ -2,9 +2,11 @@ import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import React from 'react';
 import './index.css';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './Pertemuan5/pages/Dashboard.jsx';
 // const Dashboard = React.lazy(() => import("./pages/Dashboard"))
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"))
 import Order from './Pertemuan5/layouts/Order.jsx'; 
 import Customer from './Pertemuan5/layouts/Customer.jsx';  
 import NotFound from './Pertemuan5/layouts/NotFound.jsx'; 
@@ -18,6 +20,7 @@ import Register from './Pertemuan5/pages/auth/Register.jsx';
 import Forgot from './Pertemuan5/pages/auth/Forgot.jsx';
 import Loading from './Pertemuan5/components/Loading.jsx';
 import UserPage from './Pertemuan5/layouts/UserPage.jsx';
+import Product from './pages/Product.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -28,6 +31,9 @@ createRoot(document.getElementById('root')).render(
               <Route element={<MainLayout />}>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="user" element={<UserPage />} /> 
+
+                    <Route path="product" element={<Product />} />
+                    <Route path="/products/:id" element={<ProductDetail />} /> 
         
                     <Route path="/order" element={<Order />}>
                         <Route path="orderhistory" element={<OrderHistory/>} />
