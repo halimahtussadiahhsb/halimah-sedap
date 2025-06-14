@@ -21,6 +21,7 @@ import Forgot from './Pertemuan5/pages/auth/Forgot.jsx';
 import Loading from './Pertemuan5/components/Loading.jsx';
 import UserPage from './Pertemuan5/layouts/UserPage.jsx';
 import Product from './pages/Product.jsx';
+import ProductDetail from './pages/ProductDetail.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -34,6 +35,8 @@ createRoot(document.getElementById('root')).render(
 
                     <Route path="product" element={<Product />} />
                     <Route path="/products/:id" element={<ProductDetail />} /> 
+                    {/* <Route path="/customers/:id" element={<CustomerDetail />} />
+                    <Route path="/users/:abc" element={<UserDetail />} /> */}
         
                     <Route path="/order" element={<Order />}>
                         <Route path="orderhistory" element={<OrderHistory/>} />

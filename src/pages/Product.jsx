@@ -10,6 +10,23 @@ export default function Product() {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [query, setQuery] = useState("");
+    // const { id } = useParams();
+    // const { abc } = useParams();
+
+    //     useEffect(() => {
+    //     axios
+    //         .get("https://dummyjson.com/products")
+    //         .then((response) => {
+    //             if (response.status !== 200) {
+    //                 setError(response.data.message)
+    //                 return
+    //             }
+    //             setProducts(response.data.products)
+    //         })
+    //         .catch((err) => {
+    //             setError(err.message || "An unknown error occurred")
+    //         })
+    // }, []) // <- array kosong artinya hanya dijalankan sekali setelah di-render
 
     // useEffect(() => {
     //     axios
